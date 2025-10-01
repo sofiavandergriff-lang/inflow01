@@ -222,7 +222,7 @@ export default function LoginPage() {
         
         <div className="flex flex-col justify-center items-center text-center px-12 relative z-10">
           {/* Header Text */}
-          <div className="mb-16">
+          <div className="mb-26">
             <h2 className="text-4xl font-black text-white mb-4">
               Effortlessly manage your team and operations.
             </h2>
