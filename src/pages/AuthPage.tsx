@@ -281,7 +281,7 @@ export default function AuthPage({ onNavigate }: AuthPageProps) {
                 : 'Start building your business today.'
               }
             </h2>
-            <p className="text-xl text-blue-100 max-w-md leading-relaxed">
+            <p className="text-4xl text-blue-100 max-w-md leading-relaxed">
               {isLogin 
                 ? 'Log in to access your CRM dashboard and manage your team.' 
                 : 'Join thousands of businesses growing with our platform.'
