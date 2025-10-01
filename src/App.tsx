@@ -11,7 +11,8 @@ import SecurityPage from './pages/SecurityPage';
 import ContactPage from './pages/ContactPage';
 import FeaturesPage from './pages/FeaturesPage';
 import FAQPage from './pages/FAQPage';
-import AuthPage from './pages/AuthPage';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -28,6 +29,22 @@ function App() {
     }
   };
 
+  // Handle standalone auth pages
+  if (window.location.pathname === '/login') {
+    return (
+      <AuthProvider>
+        <LoginPage />
+      </AuthProvider>
+    );
+  }
+
+  if (window.location.pathname === '/signup') {
+    return (
+      <AuthProvider>
+        <SignupPage />
+      </AuthProvider>
+    );
+  }
   const renderPage = () => {
     switch (currentPage) {
       case 'features':
@@ -46,8 +63,6 @@ function App() {
         return <TermsPage />;
       case 'security':
         return <SecurityPage />;
-      case 'auth':
-        return <AuthPage onNavigate={handleNavigation} />;
       default:
         return <HomePage onNavigate={handleNavigation} onScrollToVideo={handleScrollToVideo} />;
     }

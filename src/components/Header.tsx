@@ -30,9 +30,7 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
     if (user) {
       signOut();
     } else {
-      if (onNavigate) {
-        onNavigate('auth');
-      }
+      window.location.href = '/login';
     }
   };
 
