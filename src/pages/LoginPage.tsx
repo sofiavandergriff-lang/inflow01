@@ -226,7 +226,7 @@ export default function LoginPage() {
             <h2 className="text-4xl font-black text-white mb-4">
               Effortlessly manage your team and operations.
             </h2>
-            <p className="text-x3 text-blue-100 max-w-md leading-relaxed">
+            <p className="text-x1 text-blue-100 max-w-md-4 leading-relaxed">
               Log in to access your CRM dashboard and manage your team.
             </p>
           </div>
